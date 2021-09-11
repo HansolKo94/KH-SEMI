@@ -1,0 +1,252 @@
+:root{
+    --black-color: #34455F;
+    --white-color : #F2F2F2;
+
+}
+
+*{
+	
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container{
+	width : 1280px;
+	display: flex;
+	flex-direction: row;
+	border : none;
+	
+}
+
+.container>div{
+	margin-top: 100px;
+}
+
+.container>div>div{
+	border : 5px solid var(--black-color);
+	padding : 12px;
+	border-radius: 5px;
+}	
+.divBoudary{
+	border: 1px solid black;
+}
+
+.left{
+    position: sticky;
+    width: 100%;
+    margin-right: 30px;
+    max-width: 250px;
+    top: 100px;
+    padding: 1rem;
+    height: 100%;
+    border-radius: 5px;
+    border : 1px solid var(--black-color);
+    background-color: var(--black-color);
+}
+
+.left form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border : 1px solid var(--black-color);
+    background-color: var(--white-color);
+}
+
+.chat-content{
+    outline: none;
+    border: none;
+    flex: 2;
+}
+
+
+.chat{
+    border : 1px solid var(--black-color);
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: var(--white-color);
+}
+
+.chat::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* 채팅영역 */
+#chat_area{
+    
+    float: left;
+    width: 14vw;
+    height: 925px;
+    margin: 5px;
+  
+    
+}
+
+#chatInput_area{
+    position: absolute;
+    top: 800px;
+    width: 14vw;
+    height: 125px;
+}
+
+#chatInput_button{
+    position: relative;
+    width: 14vw;
+    height: 22px;
+
+}
+
+#chatInput_button > input{
+    float: right;
+}
+
+#chatInput_text{
+    position: relative;
+    width: 14vw;
+    height: 100px;
+}
+
+#chatInput_text > textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+}
+
+/* 판매상품 영역 */
+#deal_area{
+
+
+    
+}
+
+#deal_area > table{
+    font-size: 20px;
+}
+
+
+
+#product_name{
+    font-size: 17px;
+}
+
+
+
+/* 공지사항 영역 */
+#notice_area{
+
+    left: 0.1vw;
+    height: 300px;
+    overflow: scroll;
+    
+
+}
+
+
+/* 지도 & 버튼 영역 */
+#map_button_area{
+	display: flex;
+	flex-direction: row;
+}
+
+.common{
+    width: 51.5vw;
+    /* max-width: 990px; */
+    margin: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#map_area{
+	width : 100%;
+    height: 360px;
+   
+    
+}
+
+#button_area{
+	display : flex;
+	flex-direction : column;
+	width: 295px;
+}
+
+#button_area > input {
+    
+    float: right;
+    font-size: 20px;
+    margin: 5px;
+ 
+}
+
+#deal_area{
+		align-items: center;
+}
+
+
+/* 세로 사이즈는 고정, 가로 사이즈는 비율에 맞춰 줄어들다가 브라우저창이 1500px보다 작아질시 고정 */
+@media only screen and (max-width:1500px){
+    
+    #wrap{
+        left: 15%;
+        width: 1000px;
+    }
+
+
+    #chat_area{
+    
+        width: 210px;
+        
+    }
+
+    #chatInput_area{
+        width: 210px;
+    }
+    
+    #chatInput_button{
+        width: 210px;
+    }
+    
+    #chatInput_text{
+        width: 210px;
+    }
+
+    #deal_area{
+        left: 217px;
+
+    }
+
+    #deal_area > table{
+        left: -150px;
+    }
+
+    
+    #notice_area{
+        left: -0.3px;
+        
+    
+    }
+    
+    #map_button_area{
+        left: 217px;
+    
+    }
+    
+    .common{
+        width: 771px;
+    }
+
+    #button_area{
+        width: 295px;
+    }
+    
+    
+
+}
